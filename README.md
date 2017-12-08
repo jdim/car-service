@@ -1,7 +1,16 @@
 # Car service
 
+To run development environment
+
 ```bash
-docker-compose up
+# Set env variables
+./config.sh
+# Init Swarm cluster
+docker swarm init
+# Deploy your app
+docker stack deploy -c docker-compose.yml carserviceapp
 ```
 
-#petproject #django20
+Open http://localhost:8000/
+
+#petproject #django20 #docker #swarm
